@@ -5,7 +5,10 @@
 ## @epitech.eu
 ##
 
-SRC		=	src/malloc.c \
+SRC		=	./src/malloc_proj.c 	\
+			./src/realloc_proj.c	\
+			./src/tools_proj.c
+
 
 CFLAGS	=	-Wall -Wextra -Wno-deprecated -g3 -fPIC -I include/
 
