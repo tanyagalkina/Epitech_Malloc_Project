@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2020
-** tetris
+** malloc
 ** File description:
-** main
+** src
 */
 
 #include <unistd.h>
