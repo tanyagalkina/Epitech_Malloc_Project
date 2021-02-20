@@ -7,10 +7,10 @@
 
 #include "../include/my_malloc.h"
 
-void			*calloc(size_t nmemb, size_t size)
+void *calloc(size_t nmemb, size_t size)
 {
-    char				*tmp;
-    size_t			total;
+    char *tmp;
+    size_t total;
 
     total = nmemb * size;
     if (!total)
@@ -34,7 +34,8 @@ static void *probe(void *ptr, size_t size)
     return ((void *)1);
 }
 
-void *realloc(void *ptr, size_t size) {
+void *realloc(void *ptr, size_t size)
+{
     void *tmp;
     block_t *old = (block_t *)ptr - 1;
     size_t i = 0;

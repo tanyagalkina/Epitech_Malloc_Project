@@ -36,7 +36,8 @@ void *morecore(size_t nbytes)
     return (new_alloc->s.data_ptr);
 }
 
-void *heap_init(size_t nbytes) {
+void *heap_init(size_t nbytes)
+{
     block_t *new_alloc;
     block_t *new_free;
 
@@ -78,7 +79,8 @@ void add_to_free_list(block_t *new_free_block)
     return;
 }
 
-static block_t *remove_from_free(block_t *best) {
+static block_t *remove_from_free(block_t *best)
+{
     global_t *my_heap = my_vm;
 
     if (!best->s.previous && !best->s.next) {
@@ -98,7 +100,8 @@ static block_t *remove_from_free(block_t *best) {
     return (best);
 }
 
-void *my_best_fit(size_t nbytes) {
+void *my_best_fit(size_t nbytes)
+{
     static int i = 0;
     global_t *my_heap = my_vm;
     block_t *tmp = my_heap->free_list;
