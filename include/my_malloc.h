@@ -27,9 +27,6 @@
 
 extern void *my_vm;
 
-#define MAGIC (0xFEEDFACE)
-#define MIN(a, b) (((a)<(b))?(a):(b))
-
 typedef long Align;
 
 union block {
@@ -44,7 +41,7 @@ union block {
 
 typedef union block block_t;
 
-#define BLK_SZ     sizeof(block_t)
+#define BLK_SZ sizeof(block_t)
 
 typedef struct global_header {
     void *vm_start;
